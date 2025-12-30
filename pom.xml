@@ -5,7 +5,7 @@
   
   <groupId>com.apjc.loculus</groupId>
   <artifactId>Loculus-api-size</artifactId>
-  <version>1.0</version>
+  <version>1.0.1</version>
   
   <properties>
         <maven.compiler.source>23</maven.compiler.source>
@@ -17,7 +17,7 @@
   	<dependency>
   		<groupId>com.apjc.loculus</groupId>
   		<artifactId>Loculus</artifactId>
-  		<version>1.0-SNAPSHOT</version>
+  		<version>1.0.1</version>
   	</dependency>
   	<dependency>
   		<groupId>org.ehcache</groupId>

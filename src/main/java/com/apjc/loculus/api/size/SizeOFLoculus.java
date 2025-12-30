@@ -37,7 +37,7 @@ public class SizeOFLoculus {
 	private static <T> Sizer calculateObj(List<T> list) {
 		SizeOf size = SizeOf.newInstance();
 		Loculus<T> loculus = new Loculus<>(list);
-		Sizer sizer = new Sizer(size.deepSizeOf(list), size.deepSizeOf(loculus));
+		Sizer sizer = new Sizer(size.deepSizeOf(list), size.deepSizeOf(loculus.compress()));
 		loculus.close();
 		return sizer;
 	}
@@ -48,7 +48,7 @@ public class SizeOFLoculus {
 		long sizeList = file.length();
 		file.delete();
 		Loculus<T> loculus = new Loculus<T>(list);
-		FileLoculus.serializableFile(loculus, file);
+		FileLoculus.serializableFile(loculus.compress(), file);
 		loculus.close();
 		long sizeLoculus = file.length();
 		file.delete();
